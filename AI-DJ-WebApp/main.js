@@ -1,9 +1,12 @@
+song="";
 leftWristX = 0;
 leftWristY= 0;
 rightWristX = 0;
 rightWristY= 0;
+scoreLeftWrist = 0;
 
 function preload(){
+song=loadSound("music.mp3");
 song=loadSound("music2.mp3");
 }
 
@@ -26,7 +29,10 @@ stroke("#FF0000");
 }
  
 if(results.length >0){
-    
+
+    scoreLeftWrist = results[0].pose.keypoints[9].score;
+    console.log("scoreLeftWrist = "+ scoreLeftWrist);
+
     leftWristX = results[0].pose.leftWrist.x;
     leftWristY = results[0].pose.leftWrist.y;
     console.log("leftWristX = " + leftWristX+" leftWristY = "+leftWristY)
