@@ -46,3 +46,8 @@ canvas{
     border:5px solid white;
     border-radius:20px;
 }
+#song:hover{
+    background: greenyellow;
+    color: rgb(20, 174, 20);
+    font-weight:bold;
+}
